@@ -8,7 +8,9 @@ from bazelrio_gentool.deps.dependency_container import (
 
 
 def get_pathplannerlib_dependencies(
-    use_local_allwpilib=False, use_local_opencv=False, use_local_ni=True,
+    use_local_allwpilib=False,
+    use_local_opencv=False,
+    use_local_ni=True,
     allwpilib_version_override="2023.3.2",
     opencv_version_override="4.6.0-4",
     ni_version_override="2023.3.0",
@@ -24,7 +26,8 @@ def get_pathplannerlib_dependencies(
 
     allwpilib_dependency = ModuleDependency(
         get_allwpilib_dependencies(
-            use_local_opencv=use_local_opencv, use_local_ni=use_local_ni,
+            use_local_opencv=use_local_opencv,
+            use_local_ni=use_local_ni,
             opencv_version_override=opencv_version_override,
             ni_version_override=ni_version_override,
         ),
@@ -35,11 +38,11 @@ def get_pathplannerlib_dependencies(
     )
     group.add_module_dependency(allwpilib_dependency)
 
-    
     group.add_cc_meta_dependency(
         "pathplannerlib-cpp",
         deps=[
             "PathplannerLib-cpp",
+            "wpilibNewCommands-cpp",
             "wpilibc-cpp",
         ],
         platform_deps={},
@@ -47,9 +50,7 @@ def get_pathplannerlib_dependencies(
             # TODO
         },
     )
-    
-    
-    
+
     group.add_java_meta_dependency(
         "pathplannerlib-java",
         group_id=f"com.pathplanner.lib",
@@ -57,6 +58,5 @@ def get_pathplannerlib_dependencies(
             "wpilibj-java",
         ],
     )
-    
-    
+
     return group

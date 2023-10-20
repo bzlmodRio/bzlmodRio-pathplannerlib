@@ -37,6 +37,23 @@ def main():
     )
     generate_meta_deps(output_dir, group, force_tests=args.force_tests)
 
+    manual_cleanup(REPO_DIR)
+
+
+def manual_cleanup(repo_dir):
+    # Manual cleanup
+    cleanup_file = os.path.join(
+        repo_dir, "libraries", "cpp", "pathplannerlib-cpp", "BUILD.bazel"
+    )
+    with open(cleanup_file, "r") as f:
+        contents = f.read()
+
+    contents = contents.replace(
+        "@bzlmodrio-pathplannerlib//libraries", "@bzlmodrio-pathplannerlib//private"
+    )
+    with open(cleanup_file, "w") as f:
+        f.write(contents)
+
 
 if __name__ == "__main__":
     main()
