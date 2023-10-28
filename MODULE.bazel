@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-pathplannerlib",
-    version = "2024.0.0-beta-3",
+    version = "2024.0.0-beta-4",
     compatibility_level = 2023,
 )
 
@@ -17,6 +17,8 @@ setup_bzlmodrio_pathplannerlib_cpp_dependencies = use_extension("//:maven_cpp_de
 use_repo(
     setup_bzlmodrio_pathplannerlib_cpp_dependencies,
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_headers",
+    "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm32",
+    "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm64",
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxathena",
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxx86-64",
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_osxuniversal",
