@@ -5,7 +5,6 @@
 #include <iostream>
 
 int main() {
-
   using namespace pathplanner;
 
   std::vector<frc::Pose2d> poses{
