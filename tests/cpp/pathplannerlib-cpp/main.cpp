@@ -1,22 +1,22 @@
 
-#include <pathplanner/lib/PathPlanner.h>
-#include <pathplanner/lib/PathPlannerTrajectory.h>
-#include <pathplanner/lib/PathPoint.h>
+#include <pathplanner/lib/path/PathPlannerPath.h>
+#include <pathplanner/lib/path/PathPlannerTrajectory.h>
 
 #include <iostream>
 
-using namespace pathplanner;
-
 int main() {
-  // Simple path without holonomic rotation. Stationary start/end. Max velocity
-  // of 4 m/s and max accel of 3 m/s^2
-  PathPlannerTrajectory traj1 = PathPlanner::generatePath(
-      PathConstraints(4_mps, 3_mps_sq),
-      PathPoint(frc::Translation2d(1_m, 1_m),
-                frc::Rotation2d(0_deg)), // position, heading
-      PathPoint(frc::Translation2d(3_m, 3_m),
-                frc::Rotation2d(45_deg)) // position, heading
-  );
 
-  std::cout << traj1.getStates().size() << std::endl;
+  using namespace pathplanner;
+
+  std::vector<frc::Pose2d> poses{
+      frc::Pose2d(1.0_m, 1.0_m, frc::Rotation2d(0_deg)),
+      frc::Pose2d(3.0_m, 1.0_m, frc::Rotation2d(0_deg)),
+      frc::Pose2d(5.0_m, 3.0_m, frc::Rotation2d(90_deg))};
+  std::vector<frc::Translation2d> bezierPoints =
+      PathPlannerPath::bezierFromPoses(poses);
+
+  auto path = std::make_shared<PathPlannerPath>(
+      bezierPoints,
+      PathConstraints(3.0_mps, 3.0_mps_sq, 360_deg_per_s, 720_deg_per_s_sq),
+      GoalEndState(0.0_mps, frc::Rotation2d(-90_deg)));
 }
