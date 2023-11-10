@@ -80,29 +80,29 @@ def __setup_bzlmodrio_pathplannerlib_cpp_dependencies(mctx):
     maybe(
         http_archive,
         "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_headers",
-        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5/PathplannerLib-cpp-2024.0.0-beta-5-headers.zip",
-        sha256 = "11f350c0aa58dd4ba9908b56a29b88ce5bcd1485f07ca0eda1bfacfc7ad6456a",
+        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5.1/PathplannerLib-cpp-2024.0.0-beta-5.1-headers.zip",
+        sha256 = "661e5d002224303c3160f756a66a14933134cf983a6883d172eb12b19398b5a1",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_windowsx86-64",
-        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5/PathplannerLib-cpp-2024.0.0-beta-5-windowsx86-64.zip",
-        sha256 = "ef1f81983ced4b33a15fcab0b7736af6429bfe1efcfd2c26bbac935365e36602",
+        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5.1/PathplannerLib-cpp-2024.0.0-beta-5.1-windowsx86-64.zip",
+        sha256 = "b996e914b08423e273f83488409533f542003d95edd682bde8b838950a64e3f4",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxx86-64",
-        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5/PathplannerLib-cpp-2024.0.0-beta-5-linuxx86-64.zip",
-        sha256 = "8282893ffa8f947832bd95e13af593f80dcd4bf52b759f4165bef8a85704b274",
+        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5.1/PathplannerLib-cpp-2024.0.0-beta-5.1-linuxx86-64.zip",
+        sha256 = "fc9e18363c9b2a88964ef916a074e033ca3927747d769479fb632feeb44b91f1",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_osxuniversal",
-        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5/PathplannerLib-cpp-2024.0.0-beta-5-osxuniversal.zip",
-        sha256 = "4fb981d533da20e2eadffdb2391fb0dc6341d244c6af892f938ffe7fa60a0e8b",
+        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5.1/PathplannerLib-cpp-2024.0.0-beta-5.1-osxuniversal.zip",
+        sha256 = "4ac11e1acc6564d84c11beac71a86a7594fae7fbcd948ec1285191b276ee7323",
         build_file_content = cc_library_shared,
         patch_cmds = [
             "install_name_tool -id @rpath/libPathplannerLib.dylib osx/universal/shared/libPathplannerLib.dylib",
@@ -120,22 +120,22 @@ def __setup_bzlmodrio_pathplannerlib_cpp_dependencies(mctx):
     maybe(
         http_archive,
         "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxathena",
-        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5/PathplannerLib-cpp-2024.0.0-beta-5-linuxathena.zip",
-        sha256 = "f8f252f6f6551c1084c3dd9e1696b99612f14de023a0c15766cc7af74c3fe41d",
+        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5.1/PathplannerLib-cpp-2024.0.0-beta-5.1-linuxathena.zip",
+        sha256 = "dd75775d98c2a524678c79aa5b5c5039df00b9294b9e42ae8eeec84d94882aaa",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm32",
-        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5/PathplannerLib-cpp-2024.0.0-beta-5-linuxarm32.zip",
-        sha256 = "7020dd6fd60afc09a9df4af41d41261776ef82b11c7b9ad074291f4325577445",
+        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5.1/PathplannerLib-cpp-2024.0.0-beta-5.1-linuxarm32.zip",
+        sha256 = "3951abbe5f61f8f205f4f5705722c69a1bfe5e397c098043dad181373ca1eb4f",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm64",
-        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5/PathplannerLib-cpp-2024.0.0-beta-5-linuxarm64.zip",
-        sha256 = "5f4d84eccd33e4df33003321d257448cc41a9803fb84b97ae6a332c800d5153a",
+        url = "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.0.0-beta-5.1/PathplannerLib-cpp-2024.0.0-beta-5.1-linuxarm64.zip",
+        sha256 = "ed13c075b60da7c4cd34d38108f6397b8e8de8ed7aee780a89d09c28d28af31a",
         build_file_content = cc_library_shared,
     )
 
