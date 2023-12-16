@@ -26,7 +26,8 @@ public final class Main {
             new PathConstraints(3.0, 3.0, 2 * Math.PI, 4 * Math.PI),
             new GoalEndState(0.0, Rotation2d.fromDegrees(-90)));
 
-    PathPlannerTrajectory traj1 = new PathPlannerTrajectory(path, new ChassisSpeeds());
+    PathPlannerTrajectory traj1 =
+        new PathPlannerTrajectory(path, new ChassisSpeeds(), Rotation2d.fromDegrees(0));
     System.out.println(traj1);
   }
 }
