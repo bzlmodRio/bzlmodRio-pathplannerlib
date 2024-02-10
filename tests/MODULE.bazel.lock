@@ -14,7 +14,7 @@
   },
   "localOverrideHashes": {
     "bazel_tools": "0cc38516259ab87144b82461dd874e139f093d8e356667c3a3c5a52441ac448f",
-    "bzlmodrio-pathplannerlib": "fe23d9daadf18f96f96ab2152b69f155cd9b194e9ed205db86e4165297bd837f"
+    "bzlmodrio-pathplannerlib": "53ec70a2bb22dd4d71a8392642cbf96a4702873934caa1922fe9dc8538f1bf6d"
   },
   "moduleDepGraph": {
     "<root>": {
@@ -90,7 +90,7 @@
     },
     "bzlmodrio-pathplannerlib@_": {
       "name": "bzlmodrio-pathplannerlib",
-      "version": "2024.2.1",
+      "version": "2024.2.2",
       "key": "bzlmodrio-pathplannerlib@_",
       "repoName": "bzlmodrio-pathplannerlib",
       "executionPlatformsToRegister": [],
@@ -7550,7 +7550,7 @@
     },
     "@bzlmodrio-pathplannerlib~override//:maven_cpp_deps.bzl%setup_bzlmodrio_pathplannerlib_cpp_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "qwRuNRFy4p8495P99EElo7qCajJd0sPcosBlmZ50q+M=",
+        "bzlTransitiveDigest": "SFmSKNsJIGPM1iJXbw9gfjC3fFy5wxPh/hKW07cB/wI=",
         "accumulatedFileDigests": {},
         "envVariables": {},
         "generatedRepoSpecs": {
@@ -7559,8 +7559,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_cpp_dependencies~bazelrio_com_pathplanner_lib_pathplannerlib-cpp_headers",
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.1/PathplannerLib-cpp-2024.2.1-headers.zip",
-              "sha256": "1baf5f3cc4a07535ee84d79dc7ca2437d60ca1df3532cabfc70a118b1a1f3b40",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.2/PathplannerLib-cpp-2024.2.2-headers.zip",
+              "sha256": "e3737f6da3fd163606891c8a7ac99dc1ee172623214b9e6937c38eff7a8123b8",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -7569,8 +7569,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_cpp_dependencies~bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxx86-64",
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.1/PathplannerLib-cpp-2024.2.1-linuxx86-64.zip",
-              "sha256": "ad84fc5492e77ae89533aa423c2fbd4f93bc0bd1a04bd6448dd821ec691c7a5c",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.2/PathplannerLib-cpp-2024.2.2-linuxx86-64.zip",
+              "sha256": "f4e7c545e5f7890d1cd73a73da73480c7e6314c8315b829868f155248b07113a",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -7579,8 +7579,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_cpp_dependencies~bazelrio_com_pathplanner_lib_pathplannerlib-cpp_osxuniversal",
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.1/PathplannerLib-cpp-2024.2.1-osxuniversal.zip",
-              "sha256": "e03a309cf6d46f8d5297a15e83e2661965474fde1d0fb2863e3993e40498cf47",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.2/PathplannerLib-cpp-2024.2.2-osxuniversal.zip",
+              "sha256": "003bb7a271fd26fcc9b624df9983d692e45e1cfe7ebc99b4beeac5b4847a226e",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libPathplannerLib.dylib osx/universal/shared/libPathplannerLib.dylib",
@@ -7601,8 +7601,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_cpp_dependencies~bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm64",
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.1/PathplannerLib-cpp-2024.2.1-linuxarm64.zip",
-              "sha256": "a293a5ee218be806e87a2d1f34cd122aacda9a603a04a35ea3adf09b99e66bd8",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.2/PathplannerLib-cpp-2024.2.2-linuxarm64.zip",
+              "sha256": "137522eae5013ddf09e7bee7c4b35e3ef34a838728527580d812546be794660d",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -7611,8 +7611,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_cpp_dependencies~bazelrio_com_pathplanner_lib_pathplannerlib-cpp_windowsx86-64",
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.1/PathplannerLib-cpp-2024.2.1-windowsx86-64.zip",
-              "sha256": "ca0a0a532deab3421827e3cc4db66bca95d64b70cfbf444d27e6e4feb8f9f371",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.2/PathplannerLib-cpp-2024.2.2-windowsx86-64.zip",
+              "sha256": "9fe0fc63ec4b744c4edee3c3cabb022db3241c5e16b68e6404981398725d0e9f",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -7621,8 +7621,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_cpp_dependencies~bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm32",
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.1/PathplannerLib-cpp-2024.2.1-linuxarm32.zip",
-              "sha256": "5532d59bea9984e5240de09c80e85118868c97fff70bbd81f36829dfb9bb420d",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.2/PathplannerLib-cpp-2024.2.2-linuxarm32.zip",
+              "sha256": "5143731e5c2b7f2c29a024f4f3abc798f3c5efb18d98d9a9f75242c87c4db4fd",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -7631,8 +7631,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_cpp_dependencies~bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxathena",
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.1/PathplannerLib-cpp-2024.2.1-linuxathena.zip",
-              "sha256": "ff32a1e683a2c6abcbbb22acfc521fafec835140bb97afc6a3c8e2ac512ae27d",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2024.2.2/PathplannerLib-cpp-2024.2.2-linuxathena.zip",
+              "sha256": "29f6baab37820ea83b91e8e46914ab567af4fb6eb32b93845e8971560acc69fa",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           }
@@ -7641,7 +7641,7 @@
     },
     "@bzlmodrio-pathplannerlib~override//:maven_java_deps.bzl%setup_bzlmodrio_pathplannerlib_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "8oSQIEHBpwMZvIcQdJqn3UIUvmFOX3biYIYAUNJwFe0=",
+        "bzlTransitiveDigest": "uHih2zEkXm9UGGgQqd+s2fIB67KgBVR7c05zz++NTY0=",
         "accumulatedFileDigests": {},
         "envVariables": {},
         "generatedRepoSpecs": {
@@ -7650,17 +7650,17 @@
             "ruleClassName": "jvm_import_external",
             "attributes": {
               "artifact_urls": [
-                "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-java/2024.2.1/PathplannerLib-java-2024.2.1.jar"
+                "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-java/2024.2.2/PathplannerLib-java-2024.2.2.jar"
               ],
               "srcjar_urls": [],
-              "canonical_id": "com.pathplanner.lib:PathplannerLib-java:2024.2.1",
+              "canonical_id": "com.pathplanner.lib:PathplannerLib-java:2024.2.2",
               "rule_name": "java_import",
               "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
               "tags": [
-                "maven_coordinates=com.pathplanner.lib:PathplannerLib-java:2024.2.1"
+                "maven_coordinates=com.pathplanner.lib:PathplannerLib-java:2024.2.2"
               ],
               "name": "bzlmodrio-pathplannerlib~override~setup_bzlmodrio_pathplannerlib_java_dependencies~com_pathplanner_lib_pathplannerlib_java",
-              "artifact_sha256": "379bcc3100b394fd8b3eab9d53117c9a30a36dcc97a978d1e5226ae4b8083782"
+              "artifact_sha256": "d37715b2c1df2fc7c02d42812c0934e65dc193da46b6860b1ed6fecad6c8db98"
             }
           }
         }
