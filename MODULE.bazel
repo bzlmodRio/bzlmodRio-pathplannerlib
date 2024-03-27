@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-pathplannerlib",
-    version = "2024.2.7",
+    version = "2024.2.8",
     compatibility_level = 2024,
 )
 
