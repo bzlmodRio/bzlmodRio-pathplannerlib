@@ -1,5 +1,11 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
+alias(
+    name = "header_files",
+    actual = "@bazelrio_com_pathplanner_lib_pathplannerlib-cpp_headers//:header_files",
+    visibility = ["@bzlmodrio-pathplannerlib//:__subpackages__"],
+)
+
 cc_library(
     name = "shared_interface",
     srcs = select({
@@ -15,8 +21,8 @@ cc_library(
     deps = ["@bazelrio_com_pathplanner_lib_pathplannerlib-cpp_headers//:headers"],
 )
 
-cc_library(
-    name = "shared",
+filegroup(
+    name = "shared_raw",
     srcs = select({
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxx86-64//:shared"],
         "@rules_bazelrio//conditions:osx": ["@bazelrio_com_pathplanner_lib_pathplannerlib-cpp_osxuniversal//:shared"],
@@ -24,7 +30,14 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm32//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm64//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxathena//:shared"],
+        "//conditions:default": [],
     }),
+    visibility = ["@bzlmodrio-pathplannerlib//:__subpackages__"],
+)
+
+cc_library(
+    name = "shared",
+    srcs = [":shared_raw"],
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "//conditions:default": [],
