@@ -17,6 +17,5 @@ int main() {
   auto path = std::make_shared<PathPlannerPath>(
       bezierPoints,
       PathConstraints(3.0_mps, 3.0_mps_sq, 360_deg_per_s, 720_deg_per_s_sq),
-      std::nullopt,
-      GoalEndState(0.0_mps, frc::Rotation2d(-90_deg)));
+      std::nullopt, GoalEndState(0.0_mps, frc::Rotation2d(-90_deg)));
 }
