@@ -2,6 +2,9 @@
 #include <pathplanner/lib/path/PathPlannerPath.h>
 #include <pathplanner/lib/trajectory/PathPlannerTrajectory.h>
 
+#include <memory>
+#include <vector>
+
 #include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {

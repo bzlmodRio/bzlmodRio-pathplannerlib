@@ -3,6 +3,8 @@
 #include <pathplanner/lib/trajectory/PathPlannerTrajectory.h>
 
 #include <iostream>
+#include <memory>
+#include <vector>
 
 int main() {
   using namespace pathplanner;
