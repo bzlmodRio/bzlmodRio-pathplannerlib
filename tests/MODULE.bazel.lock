@@ -46,7 +46,8 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel": "e4004326cab72e5b27b697a01b03139276ac04c6e7c177ddb9424afc8709e51b",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/source.json": "7da669bc69d497942a9ac21b8f76c05f4a91b4212e3a697a1e27d9358576e995",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr1/MODULE.bazel": "a4251b7577b3e1dcdf5ac97363672a79d0a000dffae768df5997e1489a0440db",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr1/source.json": "383845de7921f624b577b821419b3e024f8c91393b6f9b201103180447e99693",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/MODULE.bazel": "c7db765cb7d20fd06b2c14768736ee4f7078c864fe6e85d2075f819b998e463f",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/source.json": "4f010895f72782b63b4f351fb13e340b87a3db1372a204361072c4e75900aa36",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1/MODULE.bazel": "81e540a541aac221fc84fc24124b8e5d07e2eff75942f44e67510c56794a5f22",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.1/MODULE.bazel": "cb2aa0747f84c6c3a78dad4e2049c154f08ab9d166b1273835a8174940365647",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.2/MODULE.bazel": "6915987c90970493ab97393024c156ea8fb9f3bea953b2f3ec05c34f19b5695c",
@@ -4998,8 +4999,8 @@
     },
     "@@bzlmodrio-pathplannerlib~//:maven_cpp_deps.bzl%setup_bzlmodrio_pathplannerlib_cpp_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "1gO2IAE50/FmcWFjOOUfFkegsLOw99TCvElhRlu4fv8=",
-        "usagesDigest": "qg0ptfDCZ/o5JvItXZJR7LySnd4jsS7ykiyhIBDeIOw=",
+        "bzlTransitiveDigest": "Cu2OqZmRt9F//Rw+RmqKwPMi23JI82jonbrsMMwVa4w=",
+        "usagesDigest": "69WREhK9hZsnZkMUhB/CeLSN2nA2QH59XV8ZhLtRRbA=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5008,8 +5009,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.1/PathplannerLib-cpp-2025.2.1-headers.zip",
-              "sha256": "24a00e54b126298558f95319671de09ac7a395ce96d64f7c2aee113962c92ecf",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.2/PathplannerLib-cpp-2025.2.2-headers.zip",
+              "sha256": "8b33249f5c70bf6a6b0104207685cdf6f1db9e5fc65ede88f70e3e6e6f7666dd",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -5017,8 +5018,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.1/PathplannerLib-cpp-2025.2.1-linuxx86-64.zip",
-              "sha256": "04f7b9e6f9bd6e96170d2fd292331347564e06d62cc699a60fa64c4f81642790",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.2/PathplannerLib-cpp-2025.2.2-linuxx86-64.zip",
+              "sha256": "0870974ed3fa3639bc8b55c6f7c17a81f8c1225778ac895ad85321553298b42c",
               "build_file": "@@bzlmodrio-pathplannerlib~//private/cpp/PathplannerLib-cpp:shared.BUILD.bazel"
             }
           },
@@ -5026,8 +5027,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.1/PathplannerLib-cpp-2025.2.1-osxuniversal.zip",
-              "sha256": "e83c5d552363c099226643ee1ba9b11a4ef248f6c1ac07d058b745835b8c9009",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.2/PathplannerLib-cpp-2025.2.2-osxuniversal.zip",
+              "sha256": "25c88479934259def444ba61835a295aa10642bc18509c7e8ad9c2140a51ae59",
               "build_file": "@@bzlmodrio-pathplannerlib~//private/cpp/PathplannerLib-cpp:shared.BUILD.bazel",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libPathplannerLib.dylib osx/universal/shared/libPathplannerLib.dylib",
@@ -5047,8 +5048,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.1/PathplannerLib-cpp-2025.2.1-linuxarm64.zip",
-              "sha256": "cf716321eefbde52ccfd2cc7f475b2ad1c55328343a59cbf6fd62801b94720bd",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.2/PathplannerLib-cpp-2025.2.2-linuxarm64.zip",
+              "sha256": "2d1ce7d029b62b2c85d04309193857c9678bfa5eff950ee230d3bab69e208666",
               "build_file": "@@bzlmodrio-pathplannerlib~//private/cpp/PathplannerLib-cpp:shared.BUILD.bazel"
             }
           },
@@ -5056,8 +5057,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.1/PathplannerLib-cpp-2025.2.1-windowsx86-64.zip",
-              "sha256": "058d59cca1bca205982a72ebac032b23059418254e63a52dcdda8879ba615d03",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.2/PathplannerLib-cpp-2025.2.2-windowsx86-64.zip",
+              "sha256": "11ff2036d489dc354617c0fa5b649021e37f643c5c59ac0dd676b0ef363cf9c7",
               "build_file": "@@bzlmodrio-pathplannerlib~//private/cpp/PathplannerLib-cpp:shared.BUILD.bazel"
             }
           },
@@ -5065,8 +5066,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.1/PathplannerLib-cpp-2025.2.1-linuxarm32.zip",
-              "sha256": "8262cdda57181e17102efeb112ce7e309258c8315458e0022e505ee75622f3a3",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.2/PathplannerLib-cpp-2025.2.2-linuxarm32.zip",
+              "sha256": "b5cbe82d58b1057e57695b5658d57ed4fdb4028a2a3f73766c5b0bf88fe2dcf2",
               "build_file": "@@bzlmodrio-pathplannerlib~//private/cpp/PathplannerLib-cpp:shared.BUILD.bazel"
             }
           },
@@ -5074,8 +5075,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.1/PathplannerLib-cpp-2025.2.1-linuxathena.zip",
-              "sha256": "42dcd766b125a01ba33eb7f56dfcdba64fa26fd47b33da87911d5871c8b41c72",
+              "url": "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-cpp/2025.2.2/PathplannerLib-cpp-2025.2.2-linuxathena.zip",
+              "sha256": "b89c28a4060d7e6956af702f11963c9e84a11f01f3a85fd384a66d0db89b6791",
               "build_file": "@@bzlmodrio-pathplannerlib~//private/cpp/PathplannerLib-cpp:shared.BUILD.bazel"
             }
           }
@@ -5091,8 +5092,8 @@
     },
     "@@bzlmodrio-pathplannerlib~//:maven_java_deps.bzl%setup_bzlmodrio_pathplannerlib_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "1W8rT5J5WnrVymwvkVD+Y8W8tLHvtd6W4CrYIV3tAxI=",
-        "usagesDigest": "DX/j4ZpL7OCJhvSE0f/8cyiGkjcB195duf0Lh2ahY3s=",
+        "bzlTransitiveDigest": "5jHBauafNtnjh7FEnLOFQyfFe42OEUwfdsQ4jh+Tlj8=",
+        "usagesDigest": "AU2h1lgR3pvPBLX9QNGSte4j/jogfYyKjK6FaX5yyVI=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5103,15 +5104,15 @@
             "attributes": {
               "generated_rule_name": "com_pathplanner_lib_pathplannerlib_java",
               "artifact_urls": [
-                "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-java/2025.2.1/PathplannerLib-java-2025.2.1.jar"
+                "https://3015rangerrobotics.github.io/pathplannerlib/repo/com/pathplanner/lib/PathplannerLib-java/2025.2.2/PathplannerLib-java-2025.2.2.jar"
               ],
               "srcjar_urls": [],
-              "canonical_id": "com.pathplanner.lib:PathplannerLib-java:2025.2.1",
+              "canonical_id": "com.pathplanner.lib:PathplannerLib-java:2025.2.2",
               "rule_name": "java_import",
               "tags": [
-                "maven_coordinates=com.pathplanner.lib:PathplannerLib-java:2025.2.1"
+                "maven_coordinates=com.pathplanner.lib:PathplannerLib-java:2025.2.2"
               ],
-              "artifact_sha256": "496ca037beca57743ed045a84c5efc14d0a2fc2607dbfc7da10ab54b6abb3b2b"
+              "artifact_sha256": "2520a13c462f07b6824a6611f93278b4092594865acdefc0ebd3726ee9d705e3"
             }
           }
         },
@@ -5278,8 +5279,8 @@
     },
     "@@rules_bzlmodrio_toolchains~//:extensions.bzl%sh_configure": {
       "general": {
-        "bzlTransitiveDigest": "y3VhQ/OweSckH7QhXVVFH8vrtha8h3Qq+zN/iics/uk=",
-        "usagesDigest": "xsh74sBSG5byjRbdZlFirQrenuND4+MTbjdWDksDxfo=",
+        "bzlTransitiveDigest": "FSzzLax1FSAilvZicvnhrjs+SiDm3CUZEJoKp8eiL2s=",
+        "usagesDigest": "estpE0SIh78lAlsetfALSWciUMyLq4APRv53fHY0Ukw=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5373,6 +5374,19 @@
               "cxx_version": "10",
               "sysroot_include_folder": "arm-linux-gnueabihf",
               "repo_shortname": "raspi_bullseye_32"
+            }
+          },
+          "local_systemcore": {
+            "bzlFile": "@@rules_bzlmodrio_toolchains~//toolchains:configure_cross_compiler.bzl",
+            "ruleClassName": "configure_cross_compiler",
+            "attributes": {
+              "compiler": "systemcore",
+              "bin_subfolder": "bookworm/bin",
+              "bin_prefix": "aarch64-bookworm-linux-gnu-",
+              "sysroot_subfolder": "bookworm/aarch64-linux-gnu/sysroot",
+              "cxx_version": "12",
+              "sysroot_include_folder": "aarch64-linux-gnu",
+              "repo_shortname": "systemcore"
             }
           }
         },
