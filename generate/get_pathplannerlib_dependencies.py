@@ -9,9 +9,8 @@ def get_pathplannerlib_dependencies(
     use_local_allwpilib=False,
     use_local_opencv=False,
     use_local_ni=True,
-    allwpilib_version_override="2026.1.1",
+    allwpilib_version_override="2027.0.0-alpha-6",
     opencv_version_override="2025.4.10.0-3.bcr3",
-    ni_version_override="2026.1.0",
 ):
     SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -20,7 +19,6 @@ def get_pathplannerlib_dependencies(
             use_local_opencv=use_local_opencv,
             use_local_ni=use_local_ni,
             opencv_version_override=opencv_version_override,
-            ni_version_override=ni_version_override,
         ),
         use_local_version=use_local_allwpilib,
         local_rel_folder="../../libraries/bzlmodRio-allwpilib",
@@ -39,7 +37,7 @@ def get_pathplannerlib_dependencies(
                 deps=[
                     allwpilib_dependency.container.get_cc_dependency("wpilibc-cpp"),
                     allwpilib_dependency.container.get_cc_dependency(
-                        "wpilibNewCommands-cpp"
+                        "commandsv2-cpp"
                     ),
                 ],
             ),
@@ -51,7 +49,7 @@ def get_pathplannerlib_dependencies(
         "pathplannerlib-cpp",
         deps=[
             "PathplannerLib-cpp",
-            "wpilibNewCommands-cpp",
+            "commandsv2-cpp",
             "wpilibc-cpp",
         ],
         platform_deps={},

@@ -1,25 +1,23 @@
 module(
     name = "bzlmodrio-pathplannerlib",
-    version = "2026.1.2",
-    compatibility_level = 2026,
+    version = "2027.0.0-alpha-3",
 )
 
+bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2")
 bazel_dep(name = "platforms", version = "0.0.11")
-bazel_dep(name = "rules_cc", version = "0.1.5")
-bazel_dep(name = "rules_java", version = "8.14.0")
-bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2025-1.bcr5")
+bazel_dep(name = "rules_cc", version = "0.2.13")
+bazel_dep(name = "rules_java", version = "8.16.1")
+bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2025-2")
 bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.12-7.bcr1")
-bazel_dep(name = "bzlmodrio-allwpilib", version = "2026.1.1")
+bazel_dep(name = "bzlmodrio-allwpilib", version = "2027.0.0-alpha-6")
 bazel_dep(name = "bzlmodrio-opencv", version = "2025.4.10.0-3.bcr3")
-bazel_dep(name = "bzlmodrio-ni", version = "2026.1.0")
 
-setup_bzlmodrio_pathplannerlib_cpp_dependencies = use_extension("//:maven_cpp_deps.bzl", "setup_bzlmodrio_pathplannerlib_cpp_dependencies")
+deps = use_extension("//:maven_cpp_deps.bzl", "deps")
 use_repo(
-    setup_bzlmodrio_pathplannerlib_cpp_dependencies,
+    deps,
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_headers",
-    "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm32",
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxarm64",
-    "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxathena",
+    "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxsystemcore",
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_linuxx86-64",
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_osxuniversal",
     "bazelrio_com_pathplanner_lib_pathplannerlib-cpp_windowsx86-64",
