@@ -11,7 +11,7 @@ cc_library(
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpilibNewCommands:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/commandsv2:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
         "@bzlmodrio-pathplannerlib//private/cpp/PathplannerLib-cpp:shared",
     ],
