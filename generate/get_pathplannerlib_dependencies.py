@@ -36,9 +36,7 @@ def get_pathplannerlib_dependencies(
                 artifact_install_name="PathplannerLib",
                 deps=[
                     allwpilib_dependency.container.get_cc_dependency("wpilibc-cpp"),
-                    allwpilib_dependency.container.get_cc_dependency(
-                        "commandsv2-cpp"
-                    ),
+                    allwpilib_dependency.container.get_cc_dependency("commandsv2-cpp"),
                 ],
             ),
         },
